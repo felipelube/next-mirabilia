@@ -28,7 +28,6 @@ export const defaultTheme = {
   lineHeight: {
     md: 26,
     sm: 16.0002,
-
   },
   spacing: {
     xs: 5,
