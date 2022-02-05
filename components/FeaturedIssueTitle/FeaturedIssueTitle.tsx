@@ -26,25 +26,23 @@ const FeaturedIssueTile = React.forwardRef<
       : ""
   }, [acceptingPapersUntil])
 
-  const acceptDeadlineText = useMemo(() => {
-    return papersDeadline ? (
-      <SFIT.Deadline>
-        <span>{`Accepting papers until ${papersDeadline}`}.</span> Send your
-        article to{" "}
-        <a href="mailto:subm@revistamirabilia.com">subm@revistamirabilia.com</a>{" "}
-        to publish in this issue. For more information, see our
-        <a href="<?= $send_article_link ?>">submission guidelines</a>.
-      </SFIT.Deadline>
-    ) : null
-  }, [papersDeadline])
-
   return (
     <SFIT.Box ref={ref} {...linkProps}>
       <SFIT.Organizers>{organizers}</SFIT.Organizers>
       <SFIT.IssueSemester>{issueSemester}</SFIT.IssueSemester>
       <SFIT.Title>{title}</SFIT.Title>
       <SFIT.Subtitle>{subtitle}</SFIT.Subtitle>
-      {acceptDeadlineText}
+      {papersDeadline ? (
+        <SFIT.Deadline>
+          <span>{`Accepting papers until ${papersDeadline}`}.</span> Send your
+          article to{" "}
+          <a href="mailto:subm@revistamirabilia.com">
+            subm@revistamirabilia.com
+          </a>{" "}
+          to publish in this issue. For more information, see our
+          <a href="<?= $send_article_link ?>">submission guidelines</a>.
+        </SFIT.Deadline>
+      ) : null}
     </SFIT.Box>
   )
 })
