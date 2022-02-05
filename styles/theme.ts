@@ -1,13 +1,14 @@
 export const defaultTheme = {
   colors: {
     redAccent: "#9e2b2f",
-    goldenBorder: '#eabb6e',
+    goldenBorder: "#eabb6e",
     blackText: "#281305",
     blackFadedText: "#2c3041",
     black: "#000000",
     linkHoverBlue: "#090962",
     boxHoverBlue: "#2896db",
-    grayBackground: "#f5f3f4"
+    boxBackground: "#f4eee3",
+    grayBackground: "#f5f3f4",
   },
   fonts: {
     body: '"Gentium Basic", "Garamond", serif',
@@ -33,6 +34,9 @@ export const defaultTheme = {
     xs: 5,
     sm: 10,
     lg: 20,
-    xl: 42.2358
-  }
-};
+    xl: 42.2358,
+  },
+  zIndexes: {
+    max: 100,
+  },
+}
