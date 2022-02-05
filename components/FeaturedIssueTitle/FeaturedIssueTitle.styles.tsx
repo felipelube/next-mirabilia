@@ -28,3 +28,9 @@ export const Organizers = styled.h4`
 export const IssueSemester = styled.h3`
   margin-bottom: ${(props) => props.theme.spacing.sm};
 `
+
+export const Title = styled.h1`
+  font-size: ${(props) => props.theme.fontSize.lg};
+  color: ${(props) => props.theme.colors.linkHoverBlue};
+  font-weight: bold;
+`
