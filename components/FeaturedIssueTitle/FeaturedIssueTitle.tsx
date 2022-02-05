@@ -1,5 +1,6 @@
 import React, { useMemo } from "react"
 import type { FeaturedIssueTitleProps } from "./types"
+import * as SFIT from "./FeaturedIssueTitle.styles"
 
 const FeaturedIssueTile = React.forwardRef<
   HTMLAnchorElement,
@@ -20,14 +21,14 @@ const FeaturedIssueTile = React.forwardRef<
   }, [acceptingPapersUntil])
 
   return (
-    <a ref={ref} {...props}>
+    <SFIT.Box ref={ref} {...props}>
       {organizers}
       <br />
       {issueSemester}
       {title}
       {subtitle}
       {acceptDeadlineText}
-    </a>
+    </SFIT.Box>
   )
 })
 
