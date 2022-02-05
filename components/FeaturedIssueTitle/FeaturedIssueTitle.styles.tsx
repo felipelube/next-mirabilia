@@ -34,3 +34,9 @@ export const Title = styled.h1`
   color: ${(props) => props.theme.colors.linkHoverBlue};
   font-weight: bold;
 `
+
+export const Subtitle = styled.h2`
+  font-size: 1.111em;
+  color: black;
+  line-height: 1;
+`
