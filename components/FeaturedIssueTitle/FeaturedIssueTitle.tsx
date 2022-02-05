@@ -22,7 +22,7 @@ const FeaturedIssueTile = React.forwardRef<
   return (
     <SFIT.Box ref={ref} {...linkProps}>
       <SFIT.Organizers>{organizers}</SFIT.Organizers>
-      {issueSemester}
+      <SFIT.IssueSemester>{issueSemester}</SFIT.IssueSemester>
       {title}
       {subtitle}
       {acceptDeadlineText}

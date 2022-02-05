@@ -24,3 +24,7 @@ export const Organizers = styled.h4`
   line-height: 1.2;
   color: ${(props) => props.theme.colors.blackFadedText2};
 `
+
+export const IssueSemester = styled.h3`
+  margin-bottom: ${(props) => props.theme.spacing.sm};
+`
