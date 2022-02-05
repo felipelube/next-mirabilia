@@ -4,6 +4,7 @@ export const defaultTheme = {
     goldenBorder: "#eabb6e",
     blackText: "#281305",
     blackFadedText: "#2c3041",
+    blackFadedText2: "#3b3b3b",
     black: "#000000",
     linkHoverBlue: "#090962",
     boxHoverBlue: "#2896db",

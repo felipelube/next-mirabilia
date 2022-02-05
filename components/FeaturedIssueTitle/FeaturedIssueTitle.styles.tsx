@@ -19,3 +19,8 @@ export const Box = styled.a`
     box-shadow: 0 5px 10px 0 #baaca9;
   }
 `
+
+export const Organizers = styled.h4`
+  line-height: 1.2;
+  color: ${(props) => props.theme.colors.blackFadedText2};
+`

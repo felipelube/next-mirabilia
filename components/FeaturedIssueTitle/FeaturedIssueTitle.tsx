@@ -5,10 +5,7 @@ import * as SFIT from "./FeaturedIssueTitle.styles"
 const FeaturedIssueTile = React.forwardRef<
   HTMLAnchorElement,
   FeaturedIssueTitleProps
->(function FeaturedIssueTitle(
-  props,
-  ref
-) {
+>(function FeaturedIssueTitle(props, ref) {
   const {
     organizers,
     issueSemester,
@@ -24,8 +21,7 @@ const FeaturedIssueTile = React.forwardRef<
 
   return (
     <SFIT.Box ref={ref} {...linkProps}>
-      {organizers}
-      <br />
+      <SFIT.Organizers>{organizers}</SFIT.Organizers>
       {issueSemester}
       {title}
       {subtitle}
