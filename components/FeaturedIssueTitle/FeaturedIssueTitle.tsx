@@ -5,7 +5,14 @@ const FeaturedIssueTile = React.forwardRef<
   HTMLAnchorElement,
   FeaturedIssueTitleProps
 >(function FeaturedIssueTitle(
-  { organizers, issueSemester, acceptingPapersUntil, subtitle, title },
+  {
+    organizers,
+    issueSemester,
+    acceptingPapersUntil,
+    subtitle,
+    title,
+    ...props
+  },
   ref
 ) {
   const acceptDeadlineText = useMemo(() => {
@@ -13,14 +20,14 @@ const FeaturedIssueTile = React.forwardRef<
   }, [acceptingPapersUntil])
 
   return (
-    <div>
+    <a ref={ref} {...props}>
       {organizers}
       <br />
       {issueSemester}
       {title}
       {subtitle}
       {acceptDeadlineText}
-    </div>
+    </a>
   )
 })
 
