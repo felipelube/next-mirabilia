@@ -40,3 +40,15 @@ export const Subtitle = styled.h2`
   color: black;
   line-height: 1;
 `
+
+export const Deadline = styled.h5`
+  font-weight: normal;
+  font-size: 0.889em;
+  font-style: italic;
+  margin: 0;
+  line-height: 1;
+
+  span {
+    color: #f00;
+  }
+`
