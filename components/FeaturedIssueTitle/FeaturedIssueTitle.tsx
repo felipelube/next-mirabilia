@@ -4,7 +4,7 @@ import type { FeaturedIssueTitleProps } from "./types"
 const FeaturedIssueTile = React.forwardRef<
   HTMLAnchorElement,
   FeaturedIssueTitleProps
->(function FaturedIssueTitle(
+>(function FeaturedIssueTitle(
   { organizers, issueSemester, acceptingPapersUntil, subtitle, title },
   ref
 ) {
