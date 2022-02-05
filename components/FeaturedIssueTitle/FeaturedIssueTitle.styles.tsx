@@ -15,7 +15,7 @@ export const Box = styled.a`
   width: 475px;
 
   &:hover {
-    border: solid 2px ${(props) => props.theme.colors.boxHoverBlue};
+    border-color: ${(props) => props.theme.colors.boxHoverBlue};
     box-shadow: 0 5px 10px 0 #baaca9;
   }
 `
