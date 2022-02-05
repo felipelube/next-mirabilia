@@ -6,22 +6,24 @@ const FeaturedIssueTile = React.forwardRef<
   HTMLAnchorElement,
   FeaturedIssueTitleProps
 >(function FeaturedIssueTitle(
-  {
+  props,
+  ref
+) {
+  const {
     organizers,
     issueSemester,
     acceptingPapersUntil,
     subtitle,
     title,
-    ...props
-  },
-  ref
-) {
+    ...linkProps
+  } = props
+
   const acceptDeadlineText = useMemo(() => {
     return "" //TODO:
   }, [acceptingPapersUntil])
 
   return (
-    <SFIT.Box ref={ref} {...props}>
+    <SFIT.Box ref={ref} {...linkProps}>
       {organizers}
       <br />
       {issueSemester}
