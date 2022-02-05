@@ -21,8 +21,9 @@ const FeaturedIssueTile = React.forwardRef<
   } = props
 
   const papersDeadline = useMemo(() => {
-    return acceptingPapersUntil && +acceptingPapersUntil <= +new Date()
-      ? dayjs(+acceptingPapersUntil).format("L LT")
+    const parsedDate = dayjs(acceptingPapersUntil)
+    return parsedDate.isValid() && parsedDate.isBefore(Date.now())
+      ? parsedDate.format("L LT")
       : ""
   }, [acceptingPapersUntil])
 
