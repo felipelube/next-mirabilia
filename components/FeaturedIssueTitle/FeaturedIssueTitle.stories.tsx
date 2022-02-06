@@ -25,7 +25,5 @@ const defaultProps: FeaturedIssueTitleProps = {
 }
 
 export const Default: ComponentStory<typeof FeaturedIssueTitle> = () => (
-  <FeaturedIssueTitle {...defaultProps} href="https://www.google.com">
-    FeaturedIssueTitle
-  </FeaturedIssueTitle>
+  <FeaturedIssueTitle {...defaultProps} href="https://www.google.com" />
 )
