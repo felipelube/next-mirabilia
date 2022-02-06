@@ -9,6 +9,8 @@
     "test": "jest --watch"
   },
   "dependencies": {
+    "@swc/core": "^1.2.136",
+    "@swc/jest": "^0.2.17",
     "dayjs": "^1.10.7",
     "next": "12.0.9",
     "react": "17.0.2",
