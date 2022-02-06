@@ -32,7 +32,7 @@ export const IssueSemester = styled.h3`
 `
 
 export const Title = styled.h1`
-  font-size: ${(props) => props.theme.fontSize.lg};
+  font-size: ${(props) => props.theme.fontSize.lg}px;
   color: ${(props) => props.theme.colors.linkHoverBlue};
   font-weight: bold;
 `
