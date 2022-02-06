@@ -34,7 +34,7 @@ const FeaturedIssueTitle = React.forwardRef<
       </SFIT.Link>
       {papersDeadline ? (
         <SFIT.Deadline data-testid="callForPapers">
-          <span>{`Accepting papers until ${papersDeadline}`}.</span> Send your
+          <span>{`Accepting papers until ${papersDeadline}`}</span> Send your
           article to{" "}
           <a href="mailto:subm@revistamirabilia.com">
             subm@revistamirabilia.com
