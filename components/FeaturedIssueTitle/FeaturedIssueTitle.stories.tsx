@@ -14,26 +14,30 @@ export default {
    */
   title: "FeaturedIssueTitle",
   component: FeaturedIssueTitle,
+  argTypes: {
+    acceptingPapersUntil: {
+      control: {
+        type: "date",
+      },
+    },
+  },
 } as ComponentMeta<typeof FeaturedIssueTitle>
+
+const THREE_DAYS_IN_MS = Date.now() + 3600 * 24 * 3
 
 const defaultProps: FeaturedIssueTitleProps = {
   organizers: "Fulano de tal e Siclano Oliveira",
   issueSemester: "Libanus 01 (2022/2)",
   subtitle:
-    "Incididunt aliquip labore Lorem ipsum enim eiusmod tempor anim id culpa.",
-  title: "Occaecat cupidatat fugiat non voluptate do.",
+    "Incididunt aliquip labore Lorem ipsum enim eiusmod tempor anim id culpa",
+  title: "Occaecat cupidatat fugiat non voluptate do",
+  acceptingPapersUntil: "2022-12-31",
 }
 
-const THREE_DAYS_IN_MS = Date.now() + 3600 * 24 * 3
-
-export const Default: ComponentStory<typeof FeaturedIssueTitle> = () => (
-  <FeaturedIssueTitle {...defaultProps} href="https://www.google.com" />
+const Template: ComponentStory<typeof FeaturedIssueTitle> = (args) => (
+  <FeaturedIssueTitle {...args} />
 )
 
-export const Deadline: ComponentStory<typeof FeaturedIssueTitle> = () => (
-  <FeaturedIssueTitle
-    {...defaultProps}
-    acceptingPapersUntil={THREE_DAYS_IN_MS}
-    href="https://www.google.com"
-  />
-)
+export const Default = Template.bind({})
+
+Default.args = defaultProps
