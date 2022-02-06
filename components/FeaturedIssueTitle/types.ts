@@ -11,7 +11,7 @@ export type FeaturedIssueTitleProps =
     /**
      * The last date that this issue is accepting papers
      */
-    acceptingPapersUntil?: Date | number
+    acceptingPapersUntil?: string | Date | number
     /**
      * The issue subtitle
      */
