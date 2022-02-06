@@ -1,6 +1,7 @@
 import styled from "styled-components"
 
 export const Box = styled.a`
+  color: ${(props) => props.theme.colors.blackFadedText};
   display: block;
   border: solid 2px ${(props) => props.theme.colors.goldenBorder};
   background: ${(props) => props.theme.colors.boxBackground};
