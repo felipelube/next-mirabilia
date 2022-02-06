@@ -6,15 +6,24 @@ const createJestConfig = nextJest({
 })
 
 // Add any custom config to be passed to Jest
-const customJestConfig = {
-  setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
-  // if using TypeScript with a baseUrl set to the root directory then you need the below for alias' to work
-  moduleDirectories: ["node_modules", "<rootDir>/"],
-  testEnvironment: "jest-environment-jsdom",
-  transform: {
-    "^.+\\.(t|j)sx?$": ["@swc/jest"],
-  },
+const makeCustomJestConfig = () => {
+  const isCollectingTestCoverage = process.argv.join().includes("coverage")
+  const testPattern = isCollectingTestCoverage
+    ? "^.+\\.(js|jsx|ts|tsx)$"
+    : "^.+\\.(t|j)sx?$"
+
+  return {
+    setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
+    // if using TypeScript with a baseUrl set to the root directory then you need the below for alias' to work
+    moduleDirectories: ["node_modules", "<rootDir>/"],
+    testEnvironment: "jest-environment-jsdom",
+    transform: {
+      [testPattern]: isCollectingTestCoverage
+        ? ["babel-jest", { presets: ["next/babel"] }]
+        : ["@swc/jest"],
+    },
+  }
 }
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
-module.exports = createJestConfig(customJestConfig)
+module.exports = createJestConfig(makeCustomJestConfig())
