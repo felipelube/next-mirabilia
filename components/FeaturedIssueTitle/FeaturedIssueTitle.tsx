@@ -42,8 +42,8 @@ const FeaturedIssueTitle = React.forwardRef<
           <a href="mailto:subm@revistamirabilia.com">
             subm@revistamirabilia.com
           </a>{" "}
-          to publish in this issue. For more information, see our
-          <a href="<?= $send_article_link ?>">submission guidelines</a>.
+          to publish in this issue. For more information, see our{` `}
+          <a href="/send-article">submission guidelines</a>.
         </SFIT.Deadline>
       ) : null}
     </SFIT.Box>
