@@ -1,11 +1,8 @@
 import React, { useMemo } from "react"
 import dayjs from "dayjs"
-import LocalizedFormat from "dayjs/plugin/localizedFormat"
 
 import type { FeaturedIssueTitleProps } from "./types"
 import * as SFIT from "./FeaturedIssueTitle.styles"
-
-dayjs.extend(LocalizedFormat)
 
 const FeaturedIssueTitle = React.forwardRef<
   HTMLAnchorElement,
@@ -23,7 +20,7 @@ const FeaturedIssueTitle = React.forwardRef<
   const papersDeadline = useMemo(() => {
     const parsedDate = dayjs(acceptingPapersUntil)
     return parsedDate.isValid() && parsedDate.isAfter(Date.now())
-      ? parsedDate.format("L")
+      ? parsedDate.format("MMMM D, YYYY")
       : ""
   }, [acceptingPapersUntil])
 
