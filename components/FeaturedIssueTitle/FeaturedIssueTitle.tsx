@@ -27,7 +27,7 @@ const FeaturedIssueTile = React.forwardRef<
       : ""
   }, [acceptingPapersUntil])
 
-  return (
+  return title ? (
     <SFIT.Box ref={ref} {...linkProps}>
       <SFIT.Organizers>{organizers}</SFIT.Organizers>
       <SFIT.IssueSemester>{issueSemester}</SFIT.IssueSemester>
@@ -45,7 +45,7 @@ const FeaturedIssueTile = React.forwardRef<
         </SFIT.Deadline>
       ) : null}
     </SFIT.Box>
-  )
+  ) : null
 })
 
 export { FeaturedIssueTile }
