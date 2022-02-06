@@ -17,13 +17,15 @@ export default {
 } as ComponentMeta<typeof FeaturedIssueTitle>
 
 const defaultProps: FeaturedIssueTitleProps = {
-  organizers: "Fulano de tal",
+  organizers: "Fulano de tal e Siclano Oliveira",
   issueSemester: "Libanus 01 (2022/2)",
   subtitle:
     "Incididunt aliquip labore Lorem ipsum enim eiusmod tempor anim id culpa.",
   title: "Occaecat cupidatat fugiat non voluptate do.",
 }
 
-export const Primary: ComponentStory<typeof FeaturedIssueTitle> = () => (
-  <FeaturedIssueTitle {...defaultProps}>FeaturedIssueTitle</FeaturedIssueTitle>
+export const Default: ComponentStory<typeof FeaturedIssueTitle> = () => (
+  <FeaturedIssueTitle {...defaultProps} href="https://www.google.com">
+    FeaturedIssueTitle
+  </FeaturedIssueTitle>
 )
