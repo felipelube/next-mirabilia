@@ -1,5 +1,5 @@
 import { render } from "../../utils/test-utils"
-import { FeaturedIssueTile, FeaturedIssueTitleProps } from "."
+import { FeaturedIssueTitle, FeaturedIssueTitleProps } from "."
 
 const THREE_DAYS = 3 * 3600 * 24
 
@@ -24,7 +24,7 @@ describe("FeaturedIssueTitle - component tests", () => {
         {}
       )
       const { container } = render(
-        <FeaturedIssueTile {...filteredProps}></FeaturedIssueTile>
+        <FeaturedIssueTitle {...filteredProps}></FeaturedIssueTitle>
       )
       expect(container).toBeEmptyDOMElement()
     })
@@ -37,7 +37,7 @@ describe("FeaturedIssueTitle - component tests", () => {
 
     it("should display the deadline message before the deadline", () => {
       const { getByTestId } = render(
-        <FeaturedIssueTile
+        <FeaturedIssueTitle
           {...defaultProps}
           acceptingPapersUntil={Date.now() + THREE_DAYS}
         />
@@ -47,7 +47,7 @@ describe("FeaturedIssueTitle - component tests", () => {
 
     it("should not display the deadline message after the deadline", () => {
       const { queryByTestId } = render(
-        <FeaturedIssueTile
+        <FeaturedIssueTitle
           {...defaultProps}
           acceptingPapersUntil={Date.now() - THREE_DAYS}
         />
@@ -56,7 +56,7 @@ describe("FeaturedIssueTitle - component tests", () => {
     })
 
     it("should not display the deadline message if there is no deadline set", () => {
-      const { queryByTestId } = render(<FeaturedIssueTile {...defaultProps} />)
+      const { queryByTestId } = render(<FeaturedIssueTitle {...defaultProps} />)
       expect(queryByTestId("callForPapers")).toBeNull()
     })
   })

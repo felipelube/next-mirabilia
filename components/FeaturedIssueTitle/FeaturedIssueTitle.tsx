@@ -7,7 +7,7 @@ import * as SFIT from "./FeaturedIssueTitle.styles"
 
 dayjs.extend(LocalizedFormat)
 
-const FeaturedIssueTile = React.forwardRef<
+const FeaturedIssueTitle = React.forwardRef<
   HTMLAnchorElement,
   FeaturedIssueTitleProps
 >(function FeaturedIssueTitle(props, ref) {
@@ -48,4 +48,4 @@ const FeaturedIssueTile = React.forwardRef<
   ) : null
 })
 
-export { FeaturedIssueTile }
+export { FeaturedIssueTitle }
