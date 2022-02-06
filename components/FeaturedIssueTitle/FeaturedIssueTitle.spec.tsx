@@ -7,7 +7,6 @@ describe("FeaturedIssueTitle - component tests", () => {
   const defaultProps: FeaturedIssueTitleProps = {
     organizers: "Fulano de tal",
     issueSemester: "Excrescência 01 (2022/2)",
-    acceptingPapersUntil: Date.now() + THREE_DAYS,
     subtitle:
       "Incididunt aliquip labore Lorem ipsum enim eiusmod tempor anim id culpa.",
     title: "Occaecat cupidatat fugiat non voluptate do.",
@@ -28,6 +27,32 @@ describe("FeaturedIssueTitle - component tests", () => {
         <FeaturedIssueTile {...filteredProps}></FeaturedIssueTile>
       )
       expect(container).toBeEmptyDOMElement()
+    })
+  })
+
+  describe("deadline information tests", () => {
+    beforeAll(() => {
+      jest.useFakeTimers("modern")
+    })
+
+    it("should display the deadline message before the deadline", () => {
+      const { getByTestId } = render(
+        <FeaturedIssueTile
+          {...defaultProps}
+          acceptingPapersUntil={Date.now() + THREE_DAYS}
+        />
+      )
+      expect(getByTestId("callForPapers")).toBeInTheDocument()
+    })
+
+    it("should display the deadline message before the deadline", () => {
+      const { queryByTestId } = render(
+        <FeaturedIssueTile
+          {...defaultProps}
+          acceptingPapersUntil={Date.now() - THREE_DAYS}
+        />
+      )
+      expect(queryByTestId("callForPapers")).toBeNull()
     })
   })
 })

@@ -22,7 +22,7 @@ const FeaturedIssueTile = React.forwardRef<
 
   const papersDeadline = useMemo(() => {
     const parsedDate = dayjs(acceptingPapersUntil)
-    return parsedDate.isValid() && parsedDate.isBefore(Date.now())
+    return parsedDate.isValid() && parsedDate.isAfter(Date.now())
       ? parsedDate.format("L LT")
       : ""
   }, [acceptingPapersUntil])
@@ -34,7 +34,7 @@ const FeaturedIssueTile = React.forwardRef<
       <SFIT.Title>{title}</SFIT.Title>
       <SFIT.Subtitle>{subtitle}</SFIT.Subtitle>
       {papersDeadline ? (
-        <SFIT.Deadline>
+        <SFIT.Deadline data-testid="callForPapers">
           <span>{`Accepting papers until ${papersDeadline}`}.</span> Send your
           article to{" "}
           <a href="mailto:subm@revistamirabilia.com">
