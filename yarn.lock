@@ -1339,6 +1339,11 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fontsource/gentium-basic@^4.5.1":
+  version "4.5.1"
+  resolved "https://registry.yarnpkg.com/@fontsource/gentium-basic/-/gentium-basic-4.5.1.tgz#c9afa4537bb22491aaf11682b701654366ba29fa"
+  integrity sha512-gsJ3gGdu3kxFx06flYlty5y6rpuNQ+N9Cvr7e8Mpj/aAXLf3cLaUnUpJ+ezvOOEl2fY9OV/jeFZS3RrCPuHb/g==
+
 "@gar/promisify@^1.0.1":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@gar/promisify/-/promisify-1.1.2.tgz#30aa825f11d438671d585bd44e7fd564535fc210"

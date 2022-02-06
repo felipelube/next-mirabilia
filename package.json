@@ -12,6 +12,7 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@fontsource/gentium-basic": "^4.5.1",
     "@swc/core": "^1.2.136",
     "@swc/jest": "^0.2.17",
     "dayjs": "^1.10.7",
