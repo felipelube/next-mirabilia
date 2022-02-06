@@ -23,7 +23,7 @@ const FeaturedIssueTitle = React.forwardRef<
   const papersDeadline = useMemo(() => {
     const parsedDate = dayjs(acceptingPapersUntil)
     return parsedDate.isValid() && parsedDate.isAfter(Date.now())
-      ? parsedDate.format("L LT")
+      ? parsedDate.format("L")
       : ""
   }, [acceptingPapersUntil])
 
