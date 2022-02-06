@@ -45,7 +45,7 @@ describe("FeaturedIssueTitle - component tests", () => {
       expect(getByTestId("callForPapers")).toBeInTheDocument()
     })
 
-    it("should display the deadline message before the deadline", () => {
+    it("should not display the deadline message after the deadline", () => {
       const { queryByTestId } = render(
         <FeaturedIssueTile
           {...defaultProps}
