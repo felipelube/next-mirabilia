@@ -27,7 +27,7 @@ const FeaturedIssueTile = React.forwardRef<
       : ""
   }, [acceptingPapersUntil])
 
-  return title ? (
+  return title && issueSemester && organizers ? (
     <SFIT.Box ref={ref} {...linkProps}>
       <SFIT.Organizers>{organizers}</SFIT.Organizers>
       <SFIT.IssueSemester>{issueSemester}</SFIT.IssueSemester>

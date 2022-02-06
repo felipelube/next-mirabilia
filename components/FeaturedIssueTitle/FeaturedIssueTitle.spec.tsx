@@ -13,11 +13,18 @@ describe("FeaturedIssueTitle - component tests", () => {
     title: "Occaecat cupidatat fugiat non voluptate do.",
   }
 
-  describe("should not render without essential props", () => {
-    it("without a title", () => {
-      const { title, ...filteredProps } = defaultProps
+  it("should not render without essential props", () => {
+    ;["title", "issueSemester", "organizers"].forEach((requiredProp) => {
+      const filteredProps = Object.entries(defaultProps).reduce(
+        (obj: any, [key, value]) => {
+          if (key !== requiredProp) {
+            obj[key] = value
+          }
+          return obj
+        },
+        {}
+      )
       const { container } = render(
-        //@ts-expect-error
         <FeaturedIssueTile {...filteredProps}></FeaturedIssueTile>
       )
       expect(container).toBeEmptyDOMElement()
