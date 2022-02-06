@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const Box = styled.a`
+export const Box = styled.div`
   color: ${(props) => props.theme.colors.blackFadedText};
   display: block;
   border: solid 2px ${(props) => props.theme.colors.goldenBorder};
@@ -20,6 +20,10 @@ export const Box = styled.a`
     border-color: ${(props) => props.theme.colors.boxHoverBlue};
     box-shadow: 0 5px 10px 0 #baaca9;
   }
+`
+
+export const Link = styled.a`
+  display: block;
 `
 
 export const Organizers = styled.h4`
@@ -51,6 +55,7 @@ export const Deadline = styled.h5`
   line-height: 1;
 
   span {
+    display: block;
     color: #f00;
   }
 `

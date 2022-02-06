@@ -28,11 +28,13 @@ const FeaturedIssueTitle = React.forwardRef<
   }, [acceptingPapersUntil])
 
   return title && issueSemester && organizers ? (
-    <SFIT.Box ref={ref} {...linkProps}>
-      <SFIT.Organizers>{organizers}</SFIT.Organizers>
-      <SFIT.IssueSemester>{issueSemester}</SFIT.IssueSemester>
-      <SFIT.Title>{title}</SFIT.Title>
-      <SFIT.Subtitle>{subtitle}</SFIT.Subtitle>
+    <SFIT.Box>
+      <SFIT.Link ref={ref} {...linkProps}>
+        <SFIT.Organizers>{organizers}</SFIT.Organizers>
+        <SFIT.IssueSemester>{issueSemester}</SFIT.IssueSemester>
+        <SFIT.Title>{title}</SFIT.Title>
+        <SFIT.Subtitle>{subtitle}</SFIT.Subtitle>
+      </SFIT.Link>
       {papersDeadline ? (
         <SFIT.Deadline data-testid="callForPapers">
           <span>{`Accepting papers until ${papersDeadline}`}.</span> Send your
