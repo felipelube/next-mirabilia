@@ -58,4 +58,8 @@ export const Deadline = styled.h5`
     display: block;
     color: #f00;
   }
+
+  a {
+    color: ${(props) => props.theme.colors.redAccent};
+  }
 `
