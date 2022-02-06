@@ -24,6 +24,16 @@ const defaultProps: FeaturedIssueTitleProps = {
   title: "Occaecat cupidatat fugiat non voluptate do.",
 }
 
+const THREE_DAYS_IN_MS = Date.now() + 3600 * 24 * 3
+
 export const Default: ComponentStory<typeof FeaturedIssueTitle> = () => (
   <FeaturedIssueTitle {...defaultProps} href="https://www.google.com" />
+)
+
+export const Deadline: ComponentStory<typeof FeaturedIssueTitle> = () => (
+  <FeaturedIssueTitle
+    {...defaultProps}
+    acceptingPapersUntil={THREE_DAYS_IN_MS}
+    href="https://www.google.com"
+  />
 )
