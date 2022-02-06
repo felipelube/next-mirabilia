@@ -54,5 +54,10 @@ describe("FeaturedIssueTitle - component tests", () => {
       )
       expect(queryByTestId("callForPapers")).toBeNull()
     })
+
+    it("should not display the deadline message if there is no deadline set", () => {
+      const { queryByTestId } = render(<FeaturedIssueTile {...defaultProps} />)
+      expect(queryByTestId("callForPapers")).toBeNull()
+    })
   })
 })
