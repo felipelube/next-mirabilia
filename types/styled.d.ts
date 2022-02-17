@@ -13,6 +13,7 @@ declare module "styled-components" {
       boxHoverBlue: string
       boxBackground: string
       grayBackground: string
+      babyBlue: string
     }
     fonts: {
       body: string
