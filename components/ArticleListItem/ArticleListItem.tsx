@@ -15,11 +15,11 @@ const ArticleListItem: React.FC<ArticleListItemProps> = ({
   ...props
 }) => (
   <SALI.Wrapper {...props}>
-    <h2>
+    <SALI.Title>
       <a target="_blank" href={url} rel="noreferrer">
         {title}{" "}
       </a>
-    </h2>
+    </SALI.Title>
     <span property="dc:title" content={title}></span>{" "}
     <div>
       <h3>{authors}</h3>
