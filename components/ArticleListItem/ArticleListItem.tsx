@@ -1,6 +1,7 @@
 import React from "react"
 
 import type { ArticleListItemProps } from "./types"
+import * as SALI from "./ArticleListItem.styles"
 
 const ArticleListItem: React.FC<ArticleListItemProps> = ({
   originalTitle = "",
@@ -13,7 +14,7 @@ const ArticleListItem: React.FC<ArticleListItemProps> = ({
   issueURL = "",
   ...props
 }) => (
-  <article {...props}>
+  <SALI.Wrapper {...props}>
     <h2>
       <a target="_blank" href={url} rel="noreferrer">
         {title}{" "}
@@ -32,7 +33,7 @@ const ArticleListItem: React.FC<ArticleListItemProps> = ({
       </h3>
       <p>{abstract} </p>
     </div>
-  </article>
+  </SALI.Wrapper>
 )
 
 export { ArticleListItem }

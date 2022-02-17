@@ -10,6 +10,7 @@ export const defaultTheme = {
     boxHoverBlue: "#2896db",
     boxBackground: "#f4eee3",
     grayBackground: "#f5f3f4",
+    babyBlue: "#ccdcff",
   },
   fonts: {
     body: '"Gentium Basic", "Garamond", serif',
