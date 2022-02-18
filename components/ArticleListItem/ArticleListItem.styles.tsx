@@ -6,6 +6,7 @@ export const Wrapper = styled.article`
   color: var(--color-gray);
 
   transition: background-color ease-out 0.25s;
+  line-height: 1;
 
   &:hover,
   &:focus {
@@ -36,8 +37,6 @@ export const Info = styled.h3`
   font-style: italic;
   margin-bottom: 4px;
 
-  line-height: 1;
-
   ${Wrapper}:hover & a {
     text-decoration: underline;
   }
@@ -53,7 +52,6 @@ export const Authors = styled(Info)`
 `
 
 export const Abstract = styled.p`
-  line-height: 1;
   margin-top: var(--spacing-sm, 10px);
   padding: var(--spacing-xs) 0;
   text-align: justify;
