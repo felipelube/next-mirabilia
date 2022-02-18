@@ -80,4 +80,32 @@ describe("ArticleListItem - component tests", () => {
       expect(queryByText("Original title:")).toBeNull()
     })
   })
+
+  describe("published in field", () => {
+    it("if there is a issue title it should be rendered", () => {
+      const { getByRole } = render(
+        <ArticleListItem {...defaultProps}></ArticleListItem>
+      )
+      expect(
+        getByRole("heading", {
+          name: `Published in ${defaultProps.issueTitle}`,
+        })
+      ).toBeInTheDocument()
+    })
+    it("if not, the field should not be rendered", () => {
+      const { queryByText } = render(
+        <ArticleListItem {...defaultProps} issueTitle=""></ArticleListItem>
+      )
+      expect(queryByText(defaultProps.originalTitle || "")).toBeNull()
+      expect(queryByText("Published in")).toBeNull()
+    })
+
+    it("if there is a issue url, the title should be linked", () => {
+      const { getByRole } = render(
+        <ArticleListItem {...defaultProps}></ArticleListItem>
+      )
+      const link = getByRole("link", { name: defaultProps.issueTitle })
+      expect(link).toHaveAttribute("href", defaultProps.issueURL)
+    })
+  })
 })
