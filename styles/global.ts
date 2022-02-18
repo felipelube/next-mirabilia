@@ -16,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
     --color-baby-blue: ${({ theme }) => theme.colors.babyBlue};
     --color-gray: ${({ theme }) => theme.colors.gray};
 
-    --fonts-body: ${({ theme }) => theme.fonts.body};
+    --font-family-body: ${({ theme }) => theme.fonts.body};
 
     --font-weight-bold: ${({ theme }) => theme.fontWeight.bold};
     --font-weight-regular: ${({ theme }) => theme.fontWeight.regular};
