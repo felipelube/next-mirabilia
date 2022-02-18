@@ -40,3 +40,10 @@ export const Info = styled.h3`
 export const Authors = styled(Info)`
   margin-bottom: 8px;
 `
+
+export const Abstract = styled.p`
+  line-height: 1;
+  margin-top: var(--spacing-sm, 10px);
+  padding: var(--spacing-xs) 0;
+  text-align: justify;
+`

@@ -27,6 +27,7 @@ const ArticleListItem: React.FC<ArticleListItemProps> = ({
       </SALI.Authors>
       <SALI.Info>Original title: {originalTitle}</SALI.Info>
       <SALI.Info>Keywords: {keywords.join(", ")}</SALI.Info>
+      <SALI.Abstract>{abstract}</SALI.Abstract>
     </div>
   </SALI.Wrapper>
 )
