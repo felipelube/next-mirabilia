@@ -21,6 +21,8 @@ const ArticleListItem: React.FC<ArticleListItemProps> = ({
           {title}{" "}
         </a>
       </SALI.Title>
+      {/*
+      // @ts-ignore */}
       <span property="dc:title" content={title}></span>{" "}
       <div>
         <SALI.Authors>
