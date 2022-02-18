@@ -51,4 +51,13 @@ describe("ArticleListItem - component tests", () => {
       getByRole("heading", { name: defaultProps.title })
     ).toBeInTheDocument()
   })
+
+  it("the authors should be rendered as a heading", () => {
+    const { getByRole } = render(
+      <ArticleListItem {...defaultProps}></ArticleListItem>
+    )
+    expect(
+      getByRole("heading", { name: defaultProps.authors })
+    ).toBeInTheDocument()
+  })
 })
