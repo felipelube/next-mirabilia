@@ -1,4 +1,7 @@
-import { render } from "../../utils/test-utils"
+import {
+  render,
+  shouldNotRenderWithoutEssentialProps,
+} from "../../utils/test-utils"
 import { FeaturedIssueTitle, FeaturedIssueTitleProps } from "."
 
 const THREE_DAYS = 3 * 3600 * 24
@@ -12,23 +15,12 @@ describe("FeaturedIssueTitle - component tests", () => {
     title: "Occaecat cupidatat fugiat non voluptate do.",
   }
 
-  it("should not render without essential props", () => {
-    ;["title", "issueSemester", "organizers"].forEach((requiredProp) => {
-      const filteredProps = Object.entries(defaultProps).reduce(
-        (obj: any, [key, value]) => {
-          if (key !== requiredProp) {
-            obj[key] = value
-          }
-          return obj
-        },
-        {}
-      )
-      const { container } = render(
-        <FeaturedIssueTitle {...filteredProps}></FeaturedIssueTitle>
-      )
-      expect(container).toBeEmptyDOMElement()
-    })
-  })
+  it("should not render without essential props", () =>
+    shouldNotRenderWithoutEssentialProps(FeaturedIssueTitle, defaultProps, [
+      "title",
+      "issueSemester",
+      "organizers",
+    ]))
 
   describe("deadline information tests", () => {
     beforeAll(() => {

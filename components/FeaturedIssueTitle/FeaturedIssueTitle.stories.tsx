@@ -23,8 +23,6 @@ export default {
   },
 } as ComponentMeta<typeof FeaturedIssueTitle>
 
-const THREE_DAYS_IN_MS = Date.now() + 3600 * 24 * 3
-
 const defaultProps: FeaturedIssueTitleProps = {
   organizers: "Fulano de tal e Siclano Oliveira",
   issueSemester: "Libanus 01 (2022/2)",
