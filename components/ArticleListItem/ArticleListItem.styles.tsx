@@ -37,6 +37,15 @@ export const Info = styled.h3`
   margin-bottom: 4px;
 
   line-height: 1;
+
+  ${Wrapper}:hover & a {
+    text-decoration: underline;
+  }
+
+  a:hover,
+  a:focus {
+    color: var(--color-link-hover-blue);
+  }
 `
 
 export const Authors = styled(Info)`
