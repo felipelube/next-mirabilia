@@ -9,4 +9,15 @@ module.exports = {
   core: {
     builder: "webpack5",
   },
+  typescript: {
+    check: false,
+    checkOptions: {},
+    reactDocgen:
+      process.env.NODE_ENV === "production" ? "react-docgen-typescript" : false,
+    reactDocgenTypescriptOptions: {
+      shouldExtractLiteralValuesFromEnum: true,
+      propFilter: (prop) =>
+        prop.parent ? !/node_modules/.test(prop.parent.fileName) : true,
+    },
+  },
 }
