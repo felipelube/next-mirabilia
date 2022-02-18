@@ -34,7 +34,9 @@ const ArticleListItem: React.FC<ArticleListItemProps> = ({
             Published in <a href={issueURL}>{issueTitle}</a>
           </SALI.Info>
         )}
-        <SALI.Info>Keywords: {keywords.join(", ")}.</SALI.Info>
+        {Array.isArray(keywords) && keywords.length && (
+          <SALI.Info>Keywords: {keywords.join(", ")}.</SALI.Info>
+        )}
         <SALI.Abstract>{abstract}</SALI.Abstract>
       </div>
     </SALI.Wrapper>

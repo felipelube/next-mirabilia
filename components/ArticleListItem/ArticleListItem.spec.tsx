@@ -108,4 +108,23 @@ describe("ArticleListItem - component tests", () => {
       expect(link).toHaveAttribute("href", defaultProps.issueURL)
     })
   })
+
+  describe("keywords optional field", () => {
+    it("if there is a keywords it should be rendered", () => {
+      const { getByRole } = render(
+        <ArticleListItem {...defaultProps}></ArticleListItem>
+      )
+      expect(
+        getByRole("heading", {
+          name: `Keywords: ${defaultProps.keywords?.join(", ")}.`,
+        })
+      ).toBeInTheDocument()
+    })
+    it("if not, the field should not be rendered", () => {
+      const { queryByText } = render(
+        <ArticleListItem {...defaultProps} keywords={[]}></ArticleListItem>
+      )
+      expect(queryByText(/Keywords:.*/)).toBeNull()
+    })
+  })
 })
