@@ -45,6 +45,6 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: ${({ theme }) => theme.fonts.body};
+    font-family: var(--font-family-body, sans-serif);
   }
 `
