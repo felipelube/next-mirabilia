@@ -1,4 +1,7 @@
-import { render } from "../../utils/test-utils"
+import {
+  render,
+  shouldNotRenderWithoutEssentialProps,
+} from "../../utils/test-utils"
 import { ArticleListItem, ArticleListItemProps } from "."
 
 const THREE_DAYS = 3 * 3600 * 24
@@ -25,23 +28,12 @@ describe("ArticleListItem - component tests", () => {
     issueURL: "https://www.revistamirabilia.com/issues/mirabilia-13-2011-2",
   }
 
-  it("should not render without the essential props", () => {
-    ;["title", "url", "authors"].forEach((requiredProp) => {
-      const filteredProps = Object.entries(defaultProps).reduce(
-        (obj: any, [key, value]) => {
-          if (key !== requiredProp) {
-            obj[key] = value
-          }
-          return obj
-        },
-        {}
-      )
-      const { container } = render(
-        <ArticleListItem {...filteredProps}></ArticleListItem>
-      )
-      expect(container).toBeEmptyDOMElement()
-    })
-  })
+  it("should not render without the essential props", () =>
+    shouldNotRenderWithoutEssentialProps(ArticleListItem, defaultProps, [
+      "title",
+      "url",
+      "authors",
+    ]))
 
   it("the title should be rendered as a heading", () => {
     const { getByRole } = render(
