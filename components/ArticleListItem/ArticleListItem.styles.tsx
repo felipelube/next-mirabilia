@@ -27,3 +27,16 @@ export const Title = styled.h2`
     color: ${({ theme }) => theme.colors.linkHoverBlue};
   }
 `
+
+export const Info = styled.h3`
+  font-size: var(--font-size-sm, 1rem);
+  margin-top: 3.2px;
+  font-style: italic;
+  margin-bottom: 4px;
+
+  line-height: 1;
+`
+
+export const Authors = styled(Info)`
+  margin-bottom: 8px;
+`

@@ -22,16 +22,11 @@ const ArticleListItem: React.FC<ArticleListItemProps> = ({
     </SALI.Title>
     <span property="dc:title" content={title}></span>{" "}
     <div>
-      <h3>{authors}</h3>
-      <h3>
-        <strong>Original title:</strong>
-        {originalTitle}{" "}
-      </h3>
-      <h3>
-        <strong>Keywords: </strong>
-        {keywords.join(", ")}{" "}
-      </h3>
-      <p>{abstract} </p>
+      <SALI.Authors>
+        <strong>{authors}</strong>
+      </SALI.Authors>
+      <SALI.Info>Original title: {originalTitle}</SALI.Info>
+      <SALI.Info>Keywords: {keywords.join(", ")}</SALI.Info>
     </div>
   </SALI.Wrapper>
 )
