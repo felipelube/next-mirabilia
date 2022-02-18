@@ -3,12 +3,14 @@ import styled from "styled-components"
 export const Wrapper = styled.article`
   padding: ${({ theme }) => theme.spacing.sm}px
     ${({ theme }) => theme.spacing.lg}px;
+  color: var(--color-gray);
 
   transition: background-color ease-out 0.25s;
 
   &:hover,
   &:focus {
     background-color: ${({ theme }) => theme.colors.babyBlue};
+    color: var(--color-black-text, #000);
   }
 `
 
