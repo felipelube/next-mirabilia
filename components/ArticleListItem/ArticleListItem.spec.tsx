@@ -127,4 +127,19 @@ describe("ArticleListItem - component tests", () => {
       expect(queryByText(/Keywords:.*/)).toBeNull()
     })
   })
+
+  describe("abstract optional field", () => {
+    it("if there is a abstract it should be rendered", () => {
+      const { getByText } = render(
+        <ArticleListItem {...defaultProps}></ArticleListItem>
+      )
+      expect(getByText(defaultProps.abstract as string)).toBeInTheDocument()
+    })
+    it("if not, the field should not be rendered", () => {
+      const { queryByTestId } = render(
+        <ArticleListItem {...defaultProps} abstract=""></ArticleListItem>
+      )
+      expect(queryByTestId("abstract")).toBeNull()
+    })
+  })
 })

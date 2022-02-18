@@ -37,7 +37,9 @@ const ArticleListItem: React.FC<ArticleListItemProps> = ({
         {Array.isArray(keywords) && keywords.length && (
           <SALI.Info>Keywords: {keywords.join(", ")}.</SALI.Info>
         )}
-        <SALI.Abstract>{abstract}</SALI.Abstract>
+        {abstract && (
+          <SALI.Abstract data-testid="abstract">{abstract}</SALI.Abstract>
+        )}
       </div>
     </SALI.Wrapper>
   ) : null
