@@ -43,4 +43,12 @@ describe("ArticleListItem - component tests", () => {
     })
   })
 
+  it("the title should be rendered as a heading", () => {
+    const { getByRole } = render(
+      <ArticleListItem {...defaultProps}></ArticleListItem>
+    )
+    expect(
+      getByRole("heading", { name: defaultProps.title })
+    ).toBeInTheDocument()
+  })
 })
