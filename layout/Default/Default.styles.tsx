@@ -17,3 +17,6 @@ export const Sidebar = styled.aside`
   flex-grow: 0;
   display: flex;
 `
+
+export const MainContent = styled.main``
+export const Footer = styled.footer``
