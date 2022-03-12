@@ -1,21 +1,11 @@
 import { ISiteMenu } from "../types/menu-system";
 
 export function DefaultLayout(mainMenu: ISiteMenu) {
-  //TODO: Default Layout Architecture
-    //Left sidebar
-    //Main content
-    //Footer
-
-  //TODO: Logo component
-  //TODO: Menu system components and hooks
-    //TODO: useMenu hook - menu rendering
-    //TODO: MenuSection component
-    //TODO: MenuLink component
-  //TODO: SearchBar component
-  //TODO: Footer component
-    //TODO: Ivitra logo
-    //TODO: Facebook like button
-    //TODO: SiteInfo component
-    //TODO: Indexers images
-
+  return (
+    <Layout.Wrapper>
+      <Layout.Sidebar mainMenu={mainMenu}></Layout.Sidebar>
+      <Layout.MainContent></Layout.MainContent>
+      <Layout.Footer></Layout.Footer>
+    </Layout.Wrapper>
+  )
 }
