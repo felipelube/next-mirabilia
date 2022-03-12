@@ -3,6 +3,8 @@ import styled from "styled-components"
 export const Sidebar = styled.aside`
   display: flex;
 `
+export const MainContent = styled.main``
+export const Footer = styled.footer``
 
 export const Wrapper = styled.div`
   display: flex;
@@ -19,7 +21,8 @@ export const Wrapper = styled.div`
     flex-shrink: 0;
     flex-grow: 0;
   }
-`
 
-export const MainContent = styled.main``
-export const Footer = styled.footer``
+  ${MainContent} {
+    flex-grow: 1;
+  }
+`
