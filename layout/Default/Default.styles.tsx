@@ -37,7 +37,7 @@ export const FirstLine = styled.div`
   position: relative;
 
   ${Sidebar} {
-    flex-basis: 231px;
+    flex-basis: ${(props) => props.theme.constants.sidebarWidth}px;
     flex-shrink: 0;
     flex-grow: 0;
   }
