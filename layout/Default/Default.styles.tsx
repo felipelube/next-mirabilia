@@ -4,7 +4,16 @@ export const Sidebar = styled.aside`
   display: flex;
 `
 export const MainContent = styled.main``
-export const Footer = styled.footer``
+
+export const Footer = styled.footer`
+  display: flex;
+  bottom: 0;
+  background: rgba(200, 160, 116, 0.25);
+  border: solid 1px #eabb6e;
+  border-right: none;
+  clear: both;
+  min-height: 137px;
+`
 
 export const Wrapper = styled.div`
   display: flex;
