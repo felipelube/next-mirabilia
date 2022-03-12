@@ -7,7 +7,8 @@ export function DefaultLayout(mainMenu: ISiteMenu) {
     //Footer
 
   //TODO: Logo component
-  //TODO: Menu system components
+  //TODO: Menu system components and hooks
+    //TODO: useMenu hook - menu rendering
     //TODO: MenuSection component
     //TODO: MenuLink component
   //TODO: SearchBar component
