@@ -1,10 +1,11 @@
 import Image from "next/image"
 
+import * as StyledSiteInfo from "./SiteInfo.styles"
+
 export function SiteInfo() {
   return (
-    <div>
+    <StyledSiteInfo.Wrapper>
       <a
-        id="ivitra"
         href="http://www.ivitra.ua.es/"
         target="_blank"
         rel="noopener noreferrer"
@@ -17,13 +18,13 @@ export function SiteInfo() {
           height="100"
         />
       </a>
-      <h1>ISSN 1676-5818</h1>
+      <StyledSiteInfo.ISSN>ISSN 1676-5818</StyledSiteInfo.ISSN>
       <p>© 2000 Mirabilia Journal.</p>
       <p>All rights reserved.</p>
       <p>
-        <em>Web design</em> by{" "}
+        <em>Developed by</em>{" "}
         <a href="https://br.linkedin.com/in/felubra">Felipe Lube</a>.
       </p>
-    </div>
+    </StyledSiteInfo.Wrapper>
   )
 }
