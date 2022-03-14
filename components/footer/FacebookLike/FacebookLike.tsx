@@ -1,8 +1,15 @@
 import Script from "next/script"
+import type {
+  DetailedHTMLProps,
+  HTMLAttributes,
+  PropsWithChildren,
+} from "react"
 import styled from "styled-components"
 import * as SFL from "./FacebookLike.styles"
 
-function FacebookLike(props) {
+function FacebookLike(
+  props: DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>
+) {
   return (
     <div {...props}>
       <div id="fb-root"></div>
