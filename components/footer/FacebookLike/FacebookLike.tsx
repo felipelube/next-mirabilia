@@ -1,9 +1,10 @@
 import Script from "next/script"
+import styled from "styled-components"
 import * as SFL from "./FacebookLike.styles"
 
-export function FacebookLike() {
+function FacebookLike(props) {
   return (
-    <>
+    <div {...props}>
       <div id="fb-root"></div>
       <Script
         async
@@ -33,6 +34,10 @@ export function FacebookLike() {
           </blockquote>
         </div>
       </SFL.FacebookWidgetWrapper>
-    </>
+    </div>
   )
 }
+
+// Wrapping necessary to refer to this component in its parent styling
+const StyledFacebookLike = styled.div``.withComponent(FacebookLike)
+export { StyledFacebookLike as FacebookLike }
