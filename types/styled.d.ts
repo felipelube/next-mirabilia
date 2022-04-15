@@ -45,5 +45,8 @@ declare module "styled-components" {
     zIndexes: {
       max: number
     }
+    constants: {
+      sidebarWidth: number
+    }
   }
 }

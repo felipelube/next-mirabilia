@@ -42,4 +42,7 @@ export const defaultTheme = {
   zIndexes: {
     max: 100,
   },
+  constants: {
+    sidebarWidth: 231,
+  },
 }
